@@ -5,17 +5,11 @@
 
 $firstName = 'David';  // This stores my first name
 
-$lastName     =
-
-
-    'Powers'
-
-
-     ; # This stores my last name
+$lastName  ='Powers'; # This stores my last name
 
 /* This is a comment that spans multiple lines.
    It uses the same syntax as CSS. */
 
 /*echo $firstName;
 echo ' ';*/
-echo $lastName;
+echo $firstName," ", $lastName;
