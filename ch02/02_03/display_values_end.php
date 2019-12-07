@@ -8,3 +8,4 @@ $number = 4200.99;
 //echo $number, ' ', $firstName;
 //print $number;
 echo $prénom;
+readline("\nName : ");

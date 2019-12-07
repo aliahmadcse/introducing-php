@@ -9,6 +9,7 @@ if (isset($_POST['send'])) {
             $missing[] = $elem;
         }
     }
+
 }
 ?>
 <!DOCTYPE HTML>
