@@ -13,3 +13,14 @@ switch ($name) {
     default:
         echo 'Is that really a piece of fairy cake?';
 }
+
+switch ($name) {
+    case 'Arthur Dent':
+        echo "Arther";
+        break;
+    case "Ali":
+        echo "Ali";
+        break;
+    default:
+        echo "Default";
+}
