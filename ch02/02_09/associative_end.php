@@ -1,13 +1,13 @@
 <?php
 $descriptions = [
-    'Earth' => 'mostly harmless',
-    'Marvin' => 'the paranoid android'
+    "Earth" => "mostly harmless",
+    "Marvin" => "the paranoid android",
 ];
 
-$descriptions['Zaphod'] = 'President of the Imperial Galactic Government';
+$descriptions["Zaphoid"] = "The president of USA";
 
-//echo $descriptions['Marvin'];
+// print_r($descriptions);
 
-//print_r($descriptions);
+// echo $descriptions["Marvin"];
 
-echo "Earth is described as {$descriptions['Earth']}";
+echo "The earth is {$descriptions['Earth']}";
