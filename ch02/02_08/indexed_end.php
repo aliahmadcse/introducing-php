@@ -1,11 +1,11 @@
 <?php
-//$characters = array('Arthur Dent', 'Ford Prefect', 'Zaphod Beeblebrox');
-$characters = ['Arthur Dent', 'Ford Prefect', 'Zaphod Beeblebrox'];
-//echo $characters;
-$characters[] = 'Marvin';
-$characters[] = 'Slartibartfast';
+$characters = [
+    "Arther Dent", "Ford Prefect",
+    "Zaford Ballefrod"
+];
+// echo $characters;
+$characters[] = "Marvin";
+$characters[] = "Slartibarfast";
 
-
-//print_r($characters);
-
+print_r($characters);
 echo $characters[1];
