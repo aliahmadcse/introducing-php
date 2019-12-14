@@ -7,13 +7,21 @@ $descriptions = [
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Using a foreach loop</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
-<body>
-<h1>Descriptions</h1>
 
+<body>
+    <h1>Descriptions</h1>
+    <?php
+    foreach ($descriptions as $key => $value) {
+        echo "<p>$descriptions[$key]</p>";
+    }
+    echo sizeof($descriptions);
+    ?>
 </body>
+
 </html>
