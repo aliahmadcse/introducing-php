@@ -9,7 +9,13 @@ $friends = [
     ['first' => 'John', 'last' => 'Black'],
     ['first' => 'Diana', 'last' => 'Black']
 ];
-sort($friends);
+usort($friends,function($a,$b){
+    print_r($a);
+    print_r($b);
+    echo "<br><br>";
+    return [$a["last"],$a['first']]<=>[$b["last"],$b["first"]];
+});
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +29,7 @@ sort($friends);
 <ul>
 <?php
 foreach ($friends as $friend) {
-    echo '<li>' . implode(' ', $friend) . '</li>';
+    echo '<li>' . implode(' ',$friend) . '</li>';
 }
 ?>
 </ul>
