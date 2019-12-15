@@ -10,4 +10,4 @@ function lyn_copyright($startYear) {
     }
 }
 
-echo lyn_copyright(2030);
+echo lyn_copyright(2015);
