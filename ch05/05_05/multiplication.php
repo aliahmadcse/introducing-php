@@ -22,7 +22,7 @@
             echo "<tr>";
             while ($col <= 12) :
                 if ($col == 1) :
-                    echo "<td>$row</td>";
+                    echo "<th>$row</th>";
                 endif;
                 echo '<td>' . $row * $col . '</td>';
                 $col++;
