@@ -8,11 +8,11 @@ $number = 2;
 
 // Pass by reference
 function doubleIt(&$num) {
-    $num *= 2;
+    return $num *= 2;
 }
 
-$doubled = doubleIt(8);
+$doubled = doubleIt($number);
 
 echo '$doubled is ' . $doubled . '<br>';
 echo '$number is ' . $number . '<br>';
-var_dump($doubled);
+// var_dump($doubled);
