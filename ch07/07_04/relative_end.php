@@ -2,7 +2,7 @@
 /*
  * IMPORTANT: Change the path after PATH_SEPARATOR to match your own environment.
  */
-set_include_path(get_include_path() . PATH_SEPARATOR . '/Library/WebServer/Documents/introducingphp/ch07/07_04/includes');
+set_include_path('C:\xampp\htdocs\introducing-php\ch07\07_04\includes');
 require 'copyright.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
