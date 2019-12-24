@@ -1,6 +1,6 @@
 <?php
 $siteroot = '/introducingphp/ch08/08_01';
-include './includes/copywright.php'; ?>
+include './includes/copyright.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
