@@ -1,5 +1,5 @@
 <?php
-$submitted = false;
+$submitted = true;
 
 if($submitted) {
     $message = 'Thank you';

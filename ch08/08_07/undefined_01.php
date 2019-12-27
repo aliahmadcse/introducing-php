@@ -8,14 +8,17 @@ $characters = ['Arthur Dent', 'Ford Prefect', 'Marvin', 'Zaphod Beeblebrox', 'Sl
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Undefined index</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
+
 <body>
-<h1>Undefined Index and Offset</h1>
-<p>In the revised edition of the Hitchhiker's Guide, Earth is described as <?= $descriptions['earth']; ?>.</p>
-<p>One of my favorite characters is <?= $characters[5]; ?>.</p>
+    <h1>Undefined Index and Offset</h1>
+    <p>In the revised edition of the Hitchhiker's Guide, Earth is described as <?= $descriptions['Earth']; ?>.</p>
+    <p>One of my favorite characters is <?= $characters[4]; ?>.</p>
 </body>
+
 </html>
