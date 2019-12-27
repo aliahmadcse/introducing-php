@@ -13,7 +13,7 @@ $descriptions = [
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
-<h1>Descriptions</h1>
+<h1>Description</h1>
 <p><?php echo "In the revised edition of the Hitchhiker's Guide, Earth is described as $descriptions['Earth']"; ?></p>
 <p>Marvin, <?php ehco $descriptions['Marvin']; ?>, has a brain the size of a planet.</p>
 </body>
