@@ -17,7 +17,9 @@ if (isset($_POST['send'])) {
 
 <body>
 <h1>Contact Us</h1>
-<?php if ($errors || $missing) : ?>
+<?php if ($_POST && $suspect): ?>
+    <p class="warning">Sorry, your mail couldn't be send</p>
+<?php elseif ($errors || $missing) : ?>
 <p class="warning">Please fix the item(s) indicated</p>
 <?php endif; ?>
 <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
