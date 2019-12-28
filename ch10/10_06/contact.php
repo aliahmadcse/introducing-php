@@ -76,7 +76,7 @@ if (isset($_POST['send'])) {
     <label for="format">Select the formats you require:</label>
     <select name="format" id="format" size="3" multiple>
       <option value="PDF">PDF</option>
-      <option value="ePub">ePub</option>
+      <option value="ePub">Pub</option>
       <option value="mobi">MOBI</option>
     </select>
   </p>
