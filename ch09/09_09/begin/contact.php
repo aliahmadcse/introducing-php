@@ -4,7 +4,7 @@ $missing = [];
 if (isset($_POST['send'])) {
     $expected = ['name', 'email', 'comments'];
     $required = ['name', 'comments'];
-    $to = 'David Powers <david@example.com>';
+    $to = 'Ali Ahmad <aliahmadcse@gmail.com>';
     $subject = 'Feedback from online form';
     $headers = [];
     $headers[] = 'From: webmaster@example.com';
@@ -12,6 +12,10 @@ if (isset($_POST['send'])) {
     $headers[] = 'Content-type: text/plain; charset=utf-8';
     $authorized = null;
     require './includes/process_mail.php';
+    if ($mailSent){
+        header("Location: thanks.php");
+        exit;
+    }
 }
 ?>
 <!doctype html>
@@ -24,7 +28,7 @@ if (isset($_POST['send'])) {
 
 <body>
 <h1>Contact Us</h1>
-<?php if ($_POST && $suspect) : ?>
+<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
 <p class="warning">Sorry, your mail couldn't be sent.</p>
 <?php elseif ($errors || $missing) : ?>
 <p class="warning">Please fix the item(s) indicated</p>

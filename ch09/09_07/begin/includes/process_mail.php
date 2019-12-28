@@ -34,4 +34,16 @@ if (!$suspect) :
             $$key = $value;
         }
     }
+    if (!$missing && !empty($email)):
+        $validemail=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+        if ($validemail){
+            $headers[]="Reply-to: $validemail";
+        }
+        else{
+            $errors['email']=true;
+        }
+    endif;
+    if (!$errors && !$missing):
+        $headers=implode('\r\n',$headers);
+    endif;
 endif;

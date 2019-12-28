@@ -76,5 +76,15 @@ if (isset($_POST['send'])) {
     <input type="submit" name="send" id="send" value="Send Comments">
   </p>
 </form>
+<pre>
+    <?php
+    if ($_POST && $mailSent){
+        echo "Message: \n\n";
+        echo htmlentities($message);
+        echo "Header: \n\n";
+        echo htmlentities($headers);
+    }
+    ?>
+</pre>
 </body>
 </html>

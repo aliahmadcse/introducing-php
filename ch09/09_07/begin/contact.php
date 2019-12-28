@@ -48,7 +48,10 @@ if (isset($_POST['send'])) {
     <label for="email">Email:
         <?php if ($missing && in_array('email', $missing)) : ?>
             <span class="warning">Please enter your email address</span>
+        <?php elseif (isset($errors['email'])): ?>
+            <span class='warning'>Email address is invalid</span>
         <?php endif; ?>
+
     </label>
     <input type="email" name="email" id="email"
         <?php

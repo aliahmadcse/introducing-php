@@ -4,6 +4,16 @@ $missing = [];
 if (isset($_POST['send'])) {
     $expected = ['name', 'email', 'comments'];
     $required = ['name', 'comments'];
+    // ------------ email function attributes ---------
+    $to='aliahmadcse@gmail.com';
+    $subject="Feedback from online form";
+    $headers=[];
+    $headers[]='From: webmaster@example.com';
+    $headers[]='Cc: another@example.com';
+    $headers[]='Content-type: text/plain; charset=utf-8';
+    $authorized=null;
+    
+    // ------------------------------------------------
     require './includes/process_mail.php';
 }
 ?>

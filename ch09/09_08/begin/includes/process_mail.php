@@ -1,4 +1,5 @@
 <?php
+$mailSent=false;
 // Assume the input contains nothing suspect
 $suspect = false;
 // Regular expression to search for suspect phrases
@@ -46,5 +47,26 @@ if (!$suspect) :
     // If no errors, create headers and message body
     if (!$errors && !$missing) :
         $headers = implode("\r\n", $headers);
+        //initialize message
+        $message="";
+        foreach($expected as $field):
+            if (isset($$field) && !empty($$field)){
+                $val=$$field;
+            }
+            else{
+                $val="Not selected";
+            }
+            //if an array, expand to a comma-separated string
+            if (is_array($val)){
+                $val=implode(', ',$val);
+            }
+            $field=str_replace('_',' ',$field);
+            $message.=ucfirst($field).": $val\r\n\r\n";
+        endforeach;
+        $message=wordwrap($message,70);
+        $mailSent=mail($to,$subject,$message,$headers,$authorized);
+        if (!$mailSent){
+            $errors['mailfail']=true;
+        }
     endif;
 endif;
